@@ -1,0 +1,110 @@
+Imagine Attack Scenarios
+Mitm
+Bad employee
+External attacker
+What would attackers target?
+ 
+Information Gathering
+	Spider
+	Burp Scanner Everywhere
+	Verify Burp Scanner is working as planned using Logger++ (e.g. not erroring out unexpectedly)
+	nikto scanner
+	Dirbuster
+	nmap guess os
+	Look at old report
+	google Dorking
+	Documentation
+ 
+	Configuration and Deployment Management Testing
+	Test Network/Infrastructure Configuration
+	Test Application Platform Configuration
+	Test File Extensions Handling for Sensitive Information
+	Review Old, Backup and Unreferenced Files for Sensitive Information
+	Enumerate Infrastructure and Application Admin Interfaces
+	Test HTTP Methods
+	Test HTTP Strict Transport Security
+	Test RIA cross domain policy
+	Test CORS
+ 
+Identity Management Testing
+	User Registration
+	Account enumeration
+ 
+Authentication Testing
+	Login
+	LDAP Injection
+	Password
+	simultaneous login
+	Test for JWT vulns
+		alg=none
+		public key used as hmac - we don’t have public key
+		JWT cracking
+		Weak algos - only apply to public key
+		Swap JWT's between two servers
+	
+ 
+Authorization Testing
+	direct object reference
+	direct web service access
+	AJAX calls
+ 
+Session Management Testing
+	Session Cookies
+	HTTP ONLY
+	Secure
+	Fixation
+	Persistent cookies
+	Logout
+	Timeout
+	cache control
+ 
+Input Validation Testing
+	Check java serialization bug 
+		"aced"
+		"rO0"
+	JSON Serializatoin
+	XML Serialization
+ 
+Error Handling
+ 
+Cryptography
+	heartbleed
+	SSL CERT
+	Padding oracle
+	Check entropy on session IDs and GUIDs
+	Sweet32
+ 
+Business Logic Testing
+	Timing attacks [cc/username/etc]
+	Forgot Password
+	Update Password
+	Security questions
+ 
+Client Side Testing
+ 
+MISC:
+	SSRF through domain name confusion
+	Look through comments
+	XXE
+	XSS
+	Shellshock
+	GHOST
+	Search responses for *.xsd for padding oracle
+	IIS Shortname Vuln
+	CSRF testing
+	Is there File upload? Look hard at that
+		uploading eicar to check the A-V on the upload facility
+		Does it reuse the file name? Can you trick it
+			File.txt;.php
+			File.php#.txt
+		Stored XSS?
+		Upload a shell
+		Check for ImageMagick vulnerability [if there is any image processing even outside of upload]
+		Can you use files to attack other areas based on domain trust?
+	Reflected File Download
+	clickjacking
+	Is there flash?
+		Cross frame flashing
+		crossdomain.xml
+		Swfintruder [decompile]
+	ImageTragic
