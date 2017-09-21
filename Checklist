@@ -22,6 +22,7 @@ Information Gathering
 	Review Old, Backup and Unreferenced Files for Sensitive Information
 	Enumerate Infrastructure and Application Admin Interfaces
 	Test HTTP Methods
+		Get <--> POST
 	Test HTTP Strict Transport Security
 	Test RIA cross domain policy
 	Test CORS
@@ -46,6 +47,7 @@ Authentication Testing
 Authorization Testing
 	direct object reference
 	direct web service access
+	Parameter Tampering
 	AJAX calls
  
 Session Management Testing
@@ -53,6 +55,7 @@ Session Management Testing
 	HTTP ONLY
 	Secure
 	Fixation
+	BigIP cookie Decoding
 	Persistent cookies
 	Logout
 	Timeout
